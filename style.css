@@ -87,6 +87,7 @@ html {
   justify-items: center;
   align-items: center;
   height: 100%;
+  display: none;
 }
 #page-content #home p {
   align-self: end;
@@ -161,7 +162,26 @@ html {
   font-weight: bold;
 }
 #page-content #contact {
-  display: none;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}
+#page-content #contact svg {
+  width: 100px;
+  fill: white;
+}
+#page-content #contact .address,
+#page-content #contact .phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  gap: 30px;
+}
+#page-content #contact .address svg {
+  fill: rgb(175, 1, 1);
 }
 
 #footer {
