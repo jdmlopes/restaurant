@@ -1,29 +1,3 @@
-/* 
-content
-  #header
-    img
-    ul
-      li+a*3
-  #page-content
-    #home
-      p
-      button
-    #menu
-      .dish*n
-        img
-        dish-description
-          h1
-          p.description
-          p.price
-    #contact
-      .address
-        svg
-        p
-      .phone
-        svg
-        p
-  footer
-*/
 const pageModule = () => {
   const content = document.querySelector("#content");
 
@@ -33,17 +7,17 @@ const pageModule = () => {
   logo.setAttribute("alt", "Comida Brasileira");
   const links = createDOMElement("ul");
 
-  const homeLink = createDOMElement("a", "", [], "Home");
+  const homeLink = createDOMElement("a", "home-btn", [], "Início");
   homeLink.setAttribute("href", "#");
   const homeLi = createDOMElement("li");
   homeLi.appendChild(homeLink);
 
-  const menuLink = createDOMElement("a", "", [], "Menu");
+  const menuLink = createDOMElement("a", "menu-btn", [], "Menu");
   menuLink.setAttribute("href", "#");
   const menuLi = createDOMElement("li");
   menuLi.appendChild(menuLink);
 
-  const contactLink = createDOMElement("a", "", [], "Contact");
+  const contactLink = createDOMElement("a", "contact-btn", [], "Contato");
   contactLink.setAttribute("href", "#");
   const contactLi = createDOMElement("li");
   contactLi.appendChild(contactLink);
@@ -61,7 +35,7 @@ const pageModule = () => {
     "div",
     "footer",
     [],
-    "Made with ❤️ by Jonathan Lopes"
+    "Criado por Jonathan Lopes"
   );
 
   content.appendChild(header);
@@ -71,7 +45,12 @@ const pageModule = () => {
 
 export default pageModule;
 
-function createDOMElement(type, id = "", classList = [], textContent = "") {
+export function createDOMElement(
+  type,
+  id = "",
+  classList = [],
+  textContent = ""
+) {
   if (!type) return;
   let element = document.createElement(type);
   if (id) element.id = id;

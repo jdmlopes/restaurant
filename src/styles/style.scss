@@ -119,7 +119,6 @@ html {
   #home {
     @include grid();
     height: 100%;
-    display: none;
 
     p {
       align-self: end;
@@ -144,7 +143,6 @@ html {
   }
 
   #menu {
-    display: none;
     .dish {
       margin: 0 auto 20px;
       width: 90%;

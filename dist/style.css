@@ -87,7 +87,6 @@ html {
   justify-items: center;
   align-items: center;
   height: 100%;
-  display: none;
 }
 #page-content #home p {
   align-self: end;
@@ -107,9 +106,6 @@ html {
 }
 #page-content #home button:hover {
   cursor: pointer;
-}
-#page-content #menu {
-  display: none;
 }
 #page-content #menu .dish {
   margin: 0 auto 20px;

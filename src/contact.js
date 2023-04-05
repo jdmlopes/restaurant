@@ -1,5 +1,11 @@
-/* 
-<div id="contact">
+import { createDOMElement } from "./page";
+
+const contactPage = () => {
+  const pageContent = document.querySelector("#page-content");
+  pageContent.textContent = "";
+
+  const contact = createDOMElement("div", "contact");
+  contact.innerHTML = `
   <div class="address">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <title>map-marker-radius</title>
@@ -18,10 +24,9 @@
     </svg>
     <p>Phone: +55(99) 2345 - meia78</p>
   </div>
-</div>
-*/
-const contactPage = () => {
-  //TODO
+  `;
+
+  pageContent.appendChild(contact);
 };
 
 export default contactPage;
