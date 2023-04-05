@@ -119,6 +119,7 @@ html {
   #home {
     @include grid();
     height: 100%;
+    display: none;
 
     p {
       align-self: end;
@@ -190,8 +191,25 @@ html {
   }
 
   #contact {
-    //TODO
-    display: none;
+    @include grid();
+    height: 100%;
+    svg {
+      width: 100px;
+      fill: white;
+    }
+    .address,
+    .phone {
+      @include flexRow();
+      font-size: 32px;
+      font-weight: bold;
+      gap: 30px;
+    }
+
+    .address {
+      svg {
+        fill: rgb(175, 1, 1);
+      }
+    }
   }
 }
 
