@@ -1,6 +1,6 @@
-const content = document.querySelector("#content");
+import pageModule from "./page";
+import homePage from "./home";
+import menuPage from "./menu";
+import contactPage from "./contact";
 
-const test = document.createElement("p");
-test.textContent = "Hello World!";
-
-content.appendChild(test);
+pageModule();
