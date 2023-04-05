@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#content {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+}
+#content::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("/src/images/comida-brasileira-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+#header {
+  background-color: rgba(78, 125, 74, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header ul {
+  width: 30%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+#header ul li {
+  list-style: none;
+}
+#header ul li a {
+  color: #f9d000;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+#page-content {
+  padding-top: 30px;
+  margin: auto;
+  color: white;
+  width: 85%;
+  height: clamp(400px, 650px, 70vh);
+  background-color: rgba(0, 0, 0, 0.51);
+  overflow-y: auto;
+}
+#page-content::-webkit-scrollbar {
+  width: 5px;
+}
+#page-content::-webkit-scrollbar-track {
+  background: rgba(78, 125, 74, 0.8);
+}
+#page-content::-webkit-scrollbar-thumb {
+  background: #043e93;
+  border-radius: 30px;
+}
+#page-content::-webkit-scrollbar-thumb:hover {
+  background: #023683;
+}
+#page-content #home {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}
+#page-content #home p {
+  align-self: end;
+  width: 60%;
+  text-align: center;
+  font-size: 50px;
+}
+#page-content #home button {
+  width: 380px;
+  height: 90px;
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  background-color: #043e93;
+  font-size: 28px;
+  font-weight: bold;
+}
+#page-content #home button:hover {
+  cursor: pointer;
+}
+#page-content #menu {
+  display: none;
+}
+#page-content #menu .dish {
+  margin: 0 auto 20px;
+  width: 90%;
+  gap: 15px;
+}
+#page-content #menu .dish:nth-child(odd) {
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+}
+#page-content #menu .dish:nth-child(odd) .dish-description {
+  display: grid;
+  justify-items: start;
+  align-items: center;
+}
+#page-content #menu .dish:nth-child(even) {
+  display: flex;
+  justify-content: end;
+  align-items: stretch;
+  flex-direction: row-reverse;
+}
+#page-content #menu .dish:nth-child(even) .dish-description {
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  text-align: end;
+}
+#page-content #menu .dish img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#page-content #menu .dish .dish-description {
+  padding: 5px 0;
+}
+#page-content #menu .dish .dish-description * {
+  margin: 0;
+  padding: 0;
+}
+#page-content #menu .dish .dish-description h1 {
+  align-self: start;
+}
+#page-content #menu .dish .dish-description p {
+  font-size: 22px;
+}
+#page-content #menu .dish .dish-description .price {
+  align-self: end;
+  font-weight: bold;
+}
+#page-content #contact {
+  display: none;
+}
+
+#footer {
+  background-color: rgba(0, 0, 0, 0.51);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
